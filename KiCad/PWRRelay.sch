@@ -1,0 +1,494 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R1
+U 1 1 61B0A382
+P 1300 3550
+F 0 "R1" V 1507 3550 50  0000 C CNN
+F 1 "1k" V 1416 3550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1230 3550 50  0001 C CNN
+F 3 "~" H 1300 3550 50  0001 C CNN
+	1    1300 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 61B0B2EA
+P 1650 3200
+F 0 "R2" V 1857 3200 50  0000 C CNN
+F 1 "100k" V 1766 3200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1580 3200 50  0001 C CNN
+F 3 "~" H 1650 3200 50  0001 C CNN
+	1    1650 3200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 61B0B40D
+P 1650 3900
+F 0 "R3" V 1857 3900 50  0000 C CNN
+F 1 "100k" V 1766 3900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1580 3900 50  0001 C CNN
+F 3 "~" H 1650 3900 50  0001 C CNN
+	1    1650 3900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:BAV99 D1
+U 1 1 61B0C80D
+P 1900 3550
+F 0 "D1" V 1854 3629 50  0000 L CNN
+F 1 "BAV99" V 1945 3629 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1900 3050 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 1900 3550 50  0001 C CNN
+	1    1900 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1450 3550 1500 3550
+Wire Wire Line
+	1500 3900 1500 3550
+Connection ~ 1500 3550
+Wire Wire Line
+	1500 3550 1700 3550
+Wire Wire Line
+	1500 3200 1500 3550
+Wire Wire Line
+	1800 3200 1900 3200
+Wire Wire Line
+	1900 3200 1900 3250
+Wire Wire Line
+	1800 3900 1900 3900
+Wire Wire Line
+	1900 3900 1900 3850
+$Comp
+L Transistor_FET:IRLML2060 Q1
+U 1 1 61B12D2A
+P 2550 3200
+F 0 "Q1" H 2754 3246 50  0000 L CNN
+F 1 "IRLML2060" H 2754 3155 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2750 3125 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml2060pbf.pdf?fileId=5546d462533600a401535664b7fb25ee" H 2550 3200 50  0001 L CNN
+	1    2550 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C1
+U 1 1 61B19830
+P 2400 3500
+F 0 "C1" V 2652 3500 50  0000 C CNN
+F 1 "1u" V 2561 3500 50  0000 C CNN
+F 2 "Capacitor_SMD:CP_Elec_4x5.4" H 2400 3500 50  0001 C CNN
+F 3 "~" H 2400 3500 50  0001 C CNN
+	1    2400 3500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2250 3200 1900 3200
+Connection ~ 1900 3200
+Wire Wire Line
+	2350 3200 2250 3200
+Connection ~ 2250 3200
+$Comp
+L Transistor_FET:IRLML2060 Q2
+U 1 1 61B244B0
+P 2550 3900
+F 0 "Q2" H 2754 3946 50  0000 L CNN
+F 1 "IRLML2060" H 2754 3855 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2750 3825 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml2060pbf.pdf?fileId=5546d462533600a401535664b7fb25ee" H 2550 3900 50  0001 L CNN
+	1    2550 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C2
+U 1 1 61B244B6
+P 2400 4250
+F 0 "C2" V 2652 4250 50  0000 C CNN
+F 1 "1u" V 2561 4250 50  0000 C CNN
+F 2 "Capacitor_SMD:CP_Elec_4x5.4" V 2560 4250 50  0001 C CNN
+F 3 "~" H 2400 4250 50  0001 C CNN
+	1    2400 4250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2250 4250 2250 3900
+Wire Wire Line
+	2350 3900 2250 3900
+Wire Wire Line
+	2550 4250 2650 4250
+Wire Wire Line
+	2650 4250 2650 4100
+Wire Wire Line
+	1900 3900 2250 3900
+Connection ~ 1900 3900
+Connection ~ 2250 3900
+$Comp
+L power:GND #PWR0101
+U 1 1 61B25898
+P 2850 3500
+F 0 "#PWR0101" H 2850 3250 50  0001 C CNN
+F 1 "GND" V 2855 3372 50  0000 R CNN
+F 2 "" H 2850 3500 50  0001 C CNN
+F 3 "" H 2850 3500 50  0001 C CNN
+	1    2850 3500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2250 3200 2250 3500
+Wire Wire Line
+	2550 3500 2650 3500
+Wire Wire Line
+	2650 3400 2650 3500
+Connection ~ 2650 3500
+$Comp
+L power:GND #PWR0102
+U 1 1 61B285CF
+P 2650 4350
+F 0 "#PWR0102" H 2650 4100 50  0001 C CNN
+F 1 "GND" H 2655 4177 50  0000 C CNN
+F 2 "" H 2650 4350 50  0001 C CNN
+F 3 "" H 2650 4350 50  0001 C CNN
+	1    2650 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 3500 2850 3500
+Wire Wire Line
+	4050 3400 4300 3400
+Wire Wire Line
+	4900 3500 5400 3500
+Wire Wire Line
+	4300 3000 4100 3000
+Wire Wire Line
+	2650 2950 2650 3000
+$Comp
+L Diode:1N4148 D3
+U 1 1 61B416F6
+P 4600 2500
+F 0 "D3" H 4600 2283 50  0000 C CNN
+F 1 "1N4148" H 4600 2374 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4600 2325 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4600 2500 50  0001 C CNN
+	1    4600 2500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4450 2500 4100 2500
+Wire Wire Line
+	4100 2500 4100 3000
+Wire Wire Line
+	4750 2500 5150 2500
+Wire Wire Line
+	5150 2500 5150 3000
+Wire Wire Line
+	5150 3000 4900 3000
+$Comp
+L Device:LED D2
+U 1 1 61B45427
+P 4900 2000
+F 0 "D2" H 4893 2217 50  0000 C CNN
+F 1 "LED" H 4893 2126 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4900 2000 50  0001 C CNN
+F 3 "~" H 4900 2000 50  0001 C CNN
+	1    4900 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 61B4780E
+P 4400 2000
+F 0 "R4" V 4607 2000 50  0000 C CNN
+F 1 "1k" V 4516 2000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4330 2000 50  0001 C CNN
+F 3 "~" H 4400 2000 50  0001 C CNN
+	1    4400 2000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4250 2000 4100 2000
+Wire Wire Line
+	4100 2000 4100 2500
+Connection ~ 4100 2500
+Wire Wire Line
+	4550 2000 4750 2000
+Wire Wire Line
+	5050 2000 5150 2000
+Wire Wire Line
+	5150 2000 5150 2500
+Connection ~ 5150 2500
+$Comp
+L power:VCC #PWR0103
+U 1 1 61B4B109
+P 5150 1800
+F 0 "#PWR0103" H 5150 1650 50  0001 C CNN
+F 1 "VCC" H 5165 1973 50  0000 C CNN
+F 2 "" H 5150 1800 50  0001 C CNN
+F 3 "" H 5150 1800 50  0001 C CNN
+	1    5150 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 2000 5150 1800
+Connection ~ 5150 2000
+Wire Wire Line
+	2650 2950 3200 2950
+Wire Wire Line
+	3200 2950 3200 3000
+Wire Wire Line
+	3200 3000 4100 3000
+Connection ~ 4100 3000
+$Comp
+L Device:R R6
+U 1 1 61B7D5DB
+P 4050 4800
+F 0 "R6" H 4120 4846 50  0000 L CNN
+F 1 "360" H 4120 4755 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal" V 3980 4800 50  0001 C CNN
+F 3 "~" H 4050 4800 50  0001 C CNN
+	1    4050 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 61B7E03C
+P 5400 4900
+F 0 "R7" H 5330 4854 50  0000 R CNN
+F 1 "360" H 5330 4945 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal" V 5330 4900 50  0001 C CNN
+F 3 "~" H 5400 4900 50  0001 C CNN
+	1    5400 4900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5400 5050 5400 5250
+$Comp
+L Device:R R5
+U 1 1 61B8A9C6
+P 2600 5050
+F 0 "R5" V 2807 5050 50  0000 C CNN
+F 1 "510" V 2716 5050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2530 5050 50  0001 C CNN
+F 3 "~" H 2600 5050 50  0001 C CNN
+	1    2600 5050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2750 5050 2900 5050
+$Comp
+L power:VCC #PWR0104
+U 1 1 61B8D6FE
+P 2350 4950
+F 0 "#PWR0104" H 2350 4800 50  0001 C CNN
+F 1 "VCC" H 2365 5123 50  0000 C CNN
+F 2 "" H 2350 4950 50  0001 C CNN
+F 3 "" H 2350 4950 50  0001 C CNN
+	1    2350 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 4950 2350 5050
+Wire Wire Line
+	2350 5050 2450 5050
+Wire Wire Line
+	2900 5250 2150 5250
+Wire Wire Line
+	2150 5250 2150 4600
+Wire Wire Line
+	2150 4600 3300 4600
+Wire Wire Line
+	3300 4600 3300 3700
+Wire Wire Line
+	3300 3700 2650 3700
+$Comp
+L Connector:Conn_01x03_Male X2
+U 1 1 61B91FA0
+P 600 3550
+F 0 "X2" H 708 3831 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 900 3750 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 600 3550 50  0001 C CNN
+F 3 "~" H 600 3550 50  0001 C CNN
+	1    600  3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  3550 1150 3550
+$Comp
+L power:GND #PWR0106
+U 1 1 61B95B89
+P 1000 3950
+F 0 "#PWR0106" H 1000 3700 50  0001 C CNN
+F 1 "GND" H 1005 3777 50  0000 C CNN
+F 2 "" H 1000 3950 50  0001 C CNN
+F 3 "" H 1000 3950 50  0001 C CNN
+	1    1000 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 3950 1000 3850
+Wire Wire Line
+	1000 3650 800  3650
+Wire Wire Line
+	800  3450 950  3450
+NoConn ~ 4900 3300
+Wire Wire Line
+	2650 4350 2650 4250
+Connection ~ 2650 4250
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 61BAB762
+P 1250 2850
+F 0 "#FLG0101" H 1250 2925 50  0001 C CNN
+F 1 "PWR_FLAG" H 1250 3023 50  0000 C CNN
+F 2 "" H 1250 2850 50  0001 C CNN
+F 3 "~" H 1250 2850 50  0001 C CNN
+	1    1250 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0105
+U 1 1 61B951AF
+P 950 2550
+F 0 "#PWR0105" H 950 2400 50  0001 C CNN
+F 1 "VCC" H 965 2723 50  0000 C CNN
+F 2 "" H 950 2550 50  0001 C CNN
+F 3 "" H 950 2550 50  0001 C CNN
+	1    950  2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  2550 950  2850
+Wire Wire Line
+	1250 2850 950  2850
+Connection ~ 950  2850
+Wire Wire Line
+	950  2850 950  3450
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 61BB2C54
+P 1350 3850
+F 0 "#FLG0102" H 1350 3925 50  0001 C CNN
+F 1 "PWR_FLAG" H 1350 4023 50  0000 C CNN
+F 2 "" H 1350 3850 50  0001 C CNN
+F 3 "~" H 1350 3850 50  0001 C CNN
+	1    1350 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 2800 1250 2850
+Wire Wire Line
+	1000 3850 1350 3850
+Connection ~ 1250 2850
+Connection ~ 1000 3850
+Wire Wire Line
+	1000 3850 1000 3650
+$Comp
+L Relay:SANYOU_SRD_Form_C K1
+U 1 1 61B08C1C
+P 4600 3200
+F 0 "K1" V 4033 3200 50  0000 C CNN
+F 1 "SANYOU_SRD_Form_C" V 4124 3200 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 5050 3150 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 4600 3200 50  0001 C CNN
+	1    4600 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L Relay_SolidState:MOC3063M U1
+U 1 1 61B84541
+P 3200 5150
+F 0 "U1" H 3200 5475 50  0000 C CNN
+F 1 "MOC3063M" H 3200 5384 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W8.89mm_SMDSocket_LongPads" H 3000 4950 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/MOC3163M-D.pdf" H 3200 5150 50  0001 L CNN
+	1    3200 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Triac_Thyristor:BTA16-600B D4
+U 1 1 61B31627
+P 4650 4550
+F 0 "D4" V 4823 4550 50  0000 C CNN
+F 1 "BTA16-600BRG" V 4914 4550 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 4850 4475 50  0001 L CIN
+F 3 "https://www.st.com/resource/en/datasheet/bta16.pdf" H 4650 4550 50  0001 L CNN
+	1    4650 4550
+	0    1    1    0   
+$EndComp
+Text Label 4050 3600 0    50   ~ 0
+PWR_220
+Text Label 5400 3600 0    50   ~ 0
+PWR_220_1
+Wire Wire Line
+	4800 4550 5400 4550
+Connection ~ 5400 4550
+Wire Wire Line
+	5400 4550 5400 4750
+Wire Wire Line
+	4500 4550 4050 4550
+Connection ~ 4050 4550
+Wire Wire Line
+	4050 4550 4050 4650
+Wire Wire Line
+	4550 4400 5000 4400
+Wire Wire Line
+	5000 4400 5000 5250
+Connection ~ 5000 5250
+Wire Wire Line
+	5000 5250 5400 5250
+Wire Wire Line
+	3500 5250 5000 5250
+Wire Wire Line
+	3500 5050 4050 5050
+Wire Wire Line
+	4050 5050 4050 4950
+Wire Wire Line
+	4050 3400 4050 3800
+Wire Wire Line
+	5400 3500 5400 3800
+Wire Wire Line
+	4650 3800 4050 3800
+Connection ~ 4050 3800
+Wire Wire Line
+	4050 3800 4050 4550
+Wire Wire Line
+	4750 3800 5400 3800
+Connection ~ 5400 3800
+Wire Wire Line
+	5400 3800 5400 4550
+$Comp
+L Connector:Conn_01x01_Female J0_0
+U 1 1 61B31BC6
+P 4650 4000
+F 0 "J0_0" V 4500 3750 50  0000 L CNN
+F 1 "Conn_01x01_Female" V 4600 3150 50  0000 L CNN
+F 2 "Connector_Wire:SolderWire-2.5sqmm_1x01_D2.4mm_OD3.6mm" V 4633 4048 50  0001 L CNN
+F 3 "~" H 4650 4000 50  0001 C CNN
+	1    4650 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J0_1
+U 1 1 61B33B73
+P 4750 4000
+F 0 "J0_1" V 4600 3750 50  0000 L CNN
+F 1 "Conn_01x01_Female" V 4650 4050 50  0000 L CNN
+F 2 "Connector_Wire:SolderWire-2.5sqmm_1x01_D2.4mm_OD3.6mm" V 4733 4048 50  0001 L CNN
+F 3 "~" H 4750 4000 50  0001 C CNN
+	1    4750 4000
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC
