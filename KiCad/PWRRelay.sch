@@ -251,28 +251,6 @@ Wire Wire Line
 Wire Wire Line
 	3200 3000 4100 3000
 Connection ~ 4100 3000
-$Comp
-L Device:R R6
-U 1 1 61B7D5DB
-P 4050 4800
-F 0 "R6" H 4120 4846 50  0000 L CNN
-F 1 "360" H 4120 4755 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal" V 3980 4800 50  0001 C CNN
-F 3 "~" H 4050 4800 50  0001 C CNN
-	1    4050 4800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R7
-U 1 1 61B7E03C
-P 5400 4900
-F 0 "R7" H 5330 4854 50  0000 R CNN
-F 1 "360" H 5330 4945 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal" V 5330 4900 50  0001 C CNN
-F 3 "~" H 5400 4900 50  0001 C CNN
-	1    5400 4900
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	5400 5050 5400 5250
 $Comp
@@ -426,69 +404,82 @@ F 1 "BTA16-600BRG" V 4914 4550 50  0000 C CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 4850 4475 50  0001 L CIN
 F 3 "https://www.st.com/resource/en/datasheet/bta16.pdf" H 4650 4550 50  0001 L CNN
 	1    4650 4550
-	0    1    1    0   
+	0    -1   -1   0   
 $EndComp
-Text Label 4050 3600 0    50   ~ 0
-PWR_220
-Text Label 5400 3600 0    50   ~ 0
-PWR_220_1
-Wire Wire Line
-	4800 4550 5400 4550
-Connection ~ 5400 4550
-Wire Wire Line
-	5400 4550 5400 4750
-Wire Wire Line
-	4500 4550 4050 4550
-Connection ~ 4050 4550
-Wire Wire Line
-	4050 4550 4050 4650
-Wire Wire Line
-	4550 4400 5000 4400
-Wire Wire Line
-	5000 4400 5000 5250
-Connection ~ 5000 5250
-Wire Wire Line
-	5000 5250 5400 5250
-Wire Wire Line
-	3500 5250 5000 5250
 Wire Wire Line
 	3500 5050 4050 5050
-Wire Wire Line
-	4050 5050 4050 4950
 Wire Wire Line
 	4050 3400 4050 3800
 Wire Wire Line
 	5400 3500 5400 3800
 Wire Wire Line
 	4650 3800 4050 3800
-Connection ~ 4050 3800
-Wire Wire Line
-	4050 3800 4050 4550
 Wire Wire Line
 	4750 3800 5400 3800
 Connection ~ 5400 3800
-Wire Wire Line
-	5400 3800 5400 4550
 $Comp
-L Connector:Conn_01x01_Female J0_0
-U 1 1 61B31BC6
-P 4650 4000
-F 0 "J0_0" V 4500 3750 50  0000 L CNN
-F 1 "Conn_01x01_Female" V 4600 3150 50  0000 L CNN
-F 2 "Connector_Wire:SolderWire-2.5sqmm_1x01_D2.4mm_OD3.6mm" V 4633 4048 50  0001 L CNN
-F 3 "~" H 4650 4000 50  0001 C CNN
-	1    4650 4000
-	0    1    1    0   
+L Device:R R6
+U 1 1 61C3653B
+P 4050 4800
+F 0 "R6" V 4257 4800 50  0000 C CNN
+F 1 "360" V 4166 4800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3980 4800 50  0001 C CNN
+F 3 "~" H 4050 4800 50  0001 C CNN
+	1    4050 4800
+	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J0_1
-U 1 1 61B33B73
+L Device:R R7
+U 1 1 61C3C3EE
+P 5400 4900
+F 0 "R7" V 5607 4900 50  0000 C CNN
+F 1 "360" V 5516 4900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5330 4900 50  0001 C CNN
+F 3 "~" H 5400 4900 50  0001 C CNN
+	1    5400 4900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J0
+U 1 1 61C43FD2
 P 4750 4000
-F 0 "J0_1" V 4600 3750 50  0000 L CNN
-F 1 "Conn_01x01_Female" V 4650 4050 50  0000 L CNN
-F 2 "Connector_Wire:SolderWire-2.5sqmm_1x01_D2.4mm_OD3.6mm" V 4733 4048 50  0001 L CNN
+F 0 "J0" V 4622 4080 50  0000 L CNN
+F 1 "Conn_01x02" V 4713 4080 50  0000 L CNN
+F 2 "Connector_Phoenix_MC_HighVoltage:PhoenixContact_MC_1,5_2-G-5.08_1x02_P5.08mm_Horizontal" H 4750 4000 50  0001 C CNN
 F 3 "~" H 4750 4000 50  0001 C CNN
 	1    4750 4000
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	5400 3800 5400 4550
+Wire Wire Line
+	3500 5250 4750 5250
+Wire Wire Line
+	4050 5050 4050 4950
+Wire Wire Line
+	4050 4650 4050 4550
+Connection ~ 4050 3800
+Wire Wire Line
+	4500 4550 4050 4550
+Connection ~ 4050 4550
+Wire Wire Line
+	4050 4550 4050 3800
+Wire Wire Line
+	4800 4550 5400 4550
+Connection ~ 5400 4550
+Wire Wire Line
+	5400 4550 5400 4750
+Wire Wire Line
+	4750 4700 4750 5250
+Connection ~ 4750 5250
+Wire Wire Line
+	4750 5250 5400 5250
+Text Label 4050 3800 0    50   ~ 0
+PWR_220_0
+Text Label 4900 3800 0    50   ~ 0
+PWR_220_1
+Text Label 4050 5050 0    50   ~ 0
+PWR_220_LOW_0
+Text Label 4050 5250 0    50   ~ 0
+PWR_220_LOW_1
 $EndSCHEMATC
